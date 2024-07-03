@@ -4,5 +4,5 @@ from apps.base.models import Our_chef
 
 def about(request):
     chef = Our_chef.objects.all().order_by('?')[:3]
-    return render(request, 'about.html', locals())
+    return render(request, 'base/about.html', locals())
 

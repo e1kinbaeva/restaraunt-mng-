@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'apps.menu',
     'apps.gallery',
     'apps.reservations',
-    'apps.contact'
+    'apps.contact',
+    'apps.telegram',
 ]
 
 MIDDLEWARE = [
