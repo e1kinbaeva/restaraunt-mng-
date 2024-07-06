@@ -1,9 +1,9 @@
 PERSONE_CHOISE = [
-    ('1 - Persone', '1 - Persone'),
-    ('2 - Persone', '2 - Persone'),
-    ('3 - Persone', '3 - Persone'),
-    ('4 - Persone', '4 - Persone'),
-    ('5 - Persone', '5 - Persone'),
+    ('1 ', '1 - Persone'),
+    ('2 ', '2 - Persone'),
+    ('3 ', '3 - Persone'),
+    ('4 ', '4 - Persone'),
+    ('5 ', '5 - Persone'),
 ]
 
 TIME_CHOISE = [

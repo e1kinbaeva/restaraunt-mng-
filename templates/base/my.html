@@ -26,98 +26,7 @@
    </div>
     <!-- End Banner -->
 
-    <!-- Start Top Feature 
-    ============================================= -->
-    <div class="feature-style-three-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 pr-80 pr-md-15 pr-xs-15">
-                    <div class="reservation-form light">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Book a table</h3>
-                        <form action="{% url 'index' %}" method="post">
-                            {% csrf_token %}
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <select id="persone" name="persone" required>
-                                            {% for value, display in PERSONE_CHOISE %}
-                                                <option value="{{ value }}">{{ display }}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <select id="time" name="time" required>
-                                            {% for value, display in TIME_CHOISE %}
-                                                <option value="{{ value }}">{{ display }}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <button type="submit" name="submit" id="submit">
-                                        Book A Table
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="relative default-padding-top">
-                        <!-- Navigation -->
-                        <div class="food-swiper-nav">
-                            <div class="food-cat-prev"></div>
-                            <div class="food-cat-next"></div>
-                        </div>
-                        <div class="food-cat-items">
-                            <h2 class="flex-title mb-35"><img src="{% static 'assets/img/shape/fire.png' %}" alt="Image Not Found"> Популярные категории</h2>
-                            <div class="food-cat-carousel swiper">
-                                <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Single Item -->
-                                    {% for category in category %}
-                                        <div class="swiper-slide">
-                                            <a href="#">
-                                                <img src="{{ category.photo.url }}" width="180px" height="180px" alt="Image Not Found">
-                                                <div class="overlay">
-                                                    <span>{{ category.title }}</span>
-                                                    <h5>{{ category.description }}</h5>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    {% endfor %}
-                                    <!-- End Single Item -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
+ 
 
     <!-- Start Why Choose us 
     ============================================= -->
@@ -918,7 +827,7 @@
     ============================================= -->
     <div class="download-app-area default-padding-top">
         <div class="container">
-            <div class="download-app-items bg-dark text-light" style="background-image: url({% static 'assets/img/shape/21.png' %})">
+            <div class="download-app-items bg-dark text-light" style="background-image: url(assets/img/shape/21.png})">
                 <div class="row align-center">
                     
                     <div class="col-lg-5">
@@ -1083,10 +992,9 @@
     </div>
     <!-- End Blog -->
 
-    <!-- Start Footer 
-    ============================================= -->
-{% include "include/footer.html" %}
+    {% include 'include/footer.html'%}
 
+ 
 
 </body>
 </html>
