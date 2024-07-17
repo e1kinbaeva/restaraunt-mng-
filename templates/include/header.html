@@ -2,6 +2,12 @@
 
 
 <body class="bg-dark">
+    
+    <div class="translate">
+        <button class="loacithionBth"><span class="language-switch" data-language="ru">RU</span></button>
+        <button class="loacithionBth"><span class="language-switch" data-language="ky">KG</span></button>
+        
+    </div>
 
 
     <div id="preloader">
@@ -160,7 +166,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="reservation.html">Бронирование</a></li>
-                                <li><a href="contact.html">Связаться с нами</a></li>
+                                <li><a href="{% url 'contact' %}">Связаться с нами</a></li>
                                 <!-- <li><a href="404.html">Error Page</a></li> -->
                                 <!-- <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dark Version</a>
@@ -184,14 +190,14 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Меню</a>
                             <ul class="dropdown-menu">
                                 <li><a href="food-menu.html">Меню стиль 1</a></li>
-                                <li><a href="food-menu-2.html">Меню стиль 2</a></li>
+                                <li><a href="{% url 'menu' %}">Меню стиль 2</a></li>
                                 <li><a href="food-menu-3.html">Меню стиль 3</a></li>
-                                <!-- <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dark Version</a>
+                                <!-- <!-- <li class="dropdown"> -->
+                                    <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dark Version</a> -->
                                     <ul class="dropdown-menu">
-                                        <li><a href="food-menu-dark.html">Menu Style One</a></li>
-                                        <li><a href="food-menu-2-dark.html">Menu Style Two</a></li>
-                                        <li><a href="food-menu-3-dark.html">Menu Style Three</a></li>
+                                        <!-- <li><a href="food-menu-dark.html">Menu Style One</a></li> -->
+                                        <li><a href="">Menu Style Two</a></li>
+                                        <!-- <li><a href="food-menu-3-dark.html">Menu Style Three</a></li> -->
                                     </ul>
                                 </li> -->
                             </ul>

@@ -44,7 +44,7 @@ class Base(models.Model):
 class Popular_category(models.Model):
     title = models.CharField(
         max_length=255,
-        verbose_name="Название блюда"
+        verbose_name="Категория блюда"
     )
     description = models.CharField(
         max_length=255,
@@ -65,7 +65,7 @@ class Popular_category(models.Model):
 class Our_chef(models.Model):
     name = models.CharField(
         max_length=255,
-        verbose_name="Имя Шеф-повара"
+        verbose_name="Имя повара"
     )
     type = models.CharField(
         max_length=255,
@@ -85,7 +85,7 @@ class Our_chef(models.Model):
     )
     
     def __str__(self) -> str:
-        return self.name
+        return self.type
     
     class Meta: 
         verbose_name = "Повар"
@@ -121,3 +121,149 @@ class News(models.Model):
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
+
+class Our_advantages(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Заголовок"
+    )
+    description = models.TextField(
+        verbose_name="Описание"
+    )
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = "Наши преимущества"
+        verbose_name_plural = "Наши преимущества"
+
+
+class Specialmenu_foods(models.Model):
+    name = models.CharField(
+        max_length=200,
+        verbose_name="Название основного блюда"      
+    )
+    image = models.ImageField(
+        upload_to='menu_image/',
+        verbose_name="Изображение блюда"
+    )
+    makeup1 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 1 "
+    )
+    makeup2 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 2"
+    )
+    makeup3 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 3"
+    )
+    price = models.IntegerField(
+        verbose_name="Цена блюда"
+    )
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = "Специальное меню для А основного блюда"
+        verbose_name_plural = "Специальное меню для А основных блюд"
+
+class Specialmenu_deserts(models.Model):
+    name = models.CharField(
+        max_length=200,
+        verbose_name="Название десерта"      
+    )
+    image = models.ImageField(
+        upload_to='menu_image_desert/',
+        verbose_name="Изображение десерта"
+    )
+    makeup1 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  1 "
+    )
+    makeup2 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  2"
+    )
+    makeup3 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  3"
+    )
+    price = models.IntegerField(
+        verbose_name="Цена "
+    )
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = "Специальное меню для Б десерта "
+        verbose_name_plural = "Специальное меню для Б десерта"
+
+class Specialmenu_seafood(models.Model):
+    name = models.CharField(
+        max_length=200,
+        verbose_name="Название  блюда"      
+    )
+    image = models.ImageField(
+        upload_to='menu_image_seafood/',
+        verbose_name="Изображение блюда"
+    )
+    makeup1 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 1 "
+    )
+    makeup2 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 2"
+    )
+    makeup3 = models.CharField(
+        max_length=55,
+        verbose_name="Состав блюда 3"
+    )
+    price = models.IntegerField(
+        verbose_name="Цена блюда"
+    )
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = "Специальное меню для В морепродукта "
+        verbose_name_plural = "Специальное меню для В морепродуктов"
+
+class Specialmenu_beverage(models.Model):
+    name = models.CharField(
+        max_length=200,
+        verbose_name="Название напитка"      
+    )
+    image = models.ImageField(
+        upload_to='menu_image_beverage/',
+        verbose_name="Изображение напитка"
+    )
+    makeup1 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  1 "
+    )
+    makeup2 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  2"
+    )
+    makeup3 = models.CharField(
+        max_length=55,
+        verbose_name="Состав  3"
+    )
+    price = models.IntegerField(
+        verbose_name="Цена "
+    )
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = "Специальное меню для Г напитка "
+        verbose_name_plural = "Специальное меню для Г напитков"
+
+        
+
+
+
+
+
